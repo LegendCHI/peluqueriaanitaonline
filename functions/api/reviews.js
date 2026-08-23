@@ -1,11 +1,13 @@
 export async function onRequestGet(context) {
 
+    try {
+
     const API_KEY =
-        context.env.GOOGLE_PLACES_API_KEY?.trim();
+        context.env?.GOOGLE_PLACES_API_KEY?.trim();
 
 
     const PLACE_ID =
-        context.env.PLACE_ID?.trim();
+        context.env?.PLACE_ID?.trim();
 
     if (!API_KEY || !PLACE_ID) {
 
@@ -152,5 +154,30 @@ export async function onRequestGet(context) {
         }
 
     );
+
+    } catch (error) {
+
+        return new Response(
+
+            JSON.stringify({
+                error: "Error interno en la función de reseñas",
+                details: error instanceof Error
+                    ? error.message
+                    : String(error)
+            }),
+
+            {
+                status: 500,
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                }
+
+            }
+
+        );
+
+    }
 
 }
