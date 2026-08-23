@@ -1,11 +1,11 @@
 export async function onRequestGet(context) {
 
     const API_KEY =
-        context.env.GOOGLE_PLACES_API_KEY;
+        context.env.GOOGLE_PLACES_API_KEY?.trim();
 
 
     const PLACE_ID =
-        context.env.PLACE_ID;
+        context.env.PLACE_ID?.trim();
 
     if (!API_KEY || !PLACE_ID) {
 
