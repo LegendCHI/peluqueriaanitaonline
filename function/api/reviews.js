@@ -5,7 +5,29 @@ export async function onRequestGet(context) {
 
 
     const PLACE_ID =
-        "ChIJXXXXXXXXXXXXXXXX";
+        context.env.PLACE_ID;
+
+    if (!API_KEY || !PLACE_ID) {
+
+        return new Response(
+
+            JSON.stringify({
+                error: "Faltan las variables GOOGLE_PLACES_API_KEY o PLACE_ID"
+            }),
+
+            {
+                status: 500,
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                }
+
+            }
+
+        );
+
+    }
 
 
     const url =
