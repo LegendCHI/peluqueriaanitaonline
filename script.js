@@ -34,73 +34,75 @@ document.getElementById("year").textContent =
    GOOGLE REVIEWS
 ========================= */
 
-async function loadReviews() {
+const staticReviews = [
+
+    {
+        authorName: "Andrea Gutierrez",
+        rating: 5,
+        relativeTime: "Hace 3 meses",
+        text: "Soy clienta hace varios años y su atención siempre ha sido amable cercana profesional trabaja con excelentes productos y a precios muy accesibles, la llamo le pido hora y siempre me atiende a la hora maravillosa la recomiendo 100 % en todos los sentidos."
+    },
+
+    {
+        authorName: "Lucas Molina",
+        rating: 5,
+        relativeTime: "Hace un año",
+        text: "Excelente servicio, me atendió súper bien con un cafecito y mi cabello me quedó súper!!! Recomendado a 1000."
+    },
+
+    {
+        authorName: "Tatiana Suarez Rojas",
+        rating: 5,
+        relativeTime: "Hace un año",
+        text: "Lejos la mejor, súper profesional, excelente... un 7... aparte de amorosa y gran mujer... 1000 % recomendada...."
+    },
+
+    {
+        authorName: "Dani Palma Araya",
+        rating: 5,
+        relativeTime: "Hace 6 años",
+        text: "Hoy fui a cortarme el pelo con mi hermana y quedó excelente el corte... Muy atenta y amable y aclara muy bien las dudas que tengas. Excelente servicio (primera vez que me atiendo con ella y lo seguiré haciendo)."
+    },
+
+    {
+        authorName: "Yuly UH",
+        rating: 5,
+        relativeTime: "Hace 7 años",
+        text: "Excelente lugar, buena atención, acogedor."
+    }
+
+];
+
+
+function loadReviews() {
 
     const container =
         document.getElementById(
             "reviewsContainer"
         );
 
-    try {
-
-        const response =
-            await fetch("/api/reviews");
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "No se pudieron obtener las reseñas"
-            );
-
-        }
+    document.getElementById("rating")
+        .textContent =
+        "5.0";
 
 
-        const data =
-            await response.json();
+    document.getElementById("reviewCount")
+        .textContent =
+        "5 reseñas destacadas";
 
 
-        document.getElementById("rating")
-            .textContent =
-            data.rating
-                ? data.rating.toFixed(1)
-                : "—";
+    const rating =
+        5;
 
 
-        document.getElementById("reviewCount")
-            .textContent =
-            data.userRatingCount
-                ? `${data.userRatingCount} reseñas en Google`
-                : "Google Reviews";
+    document.getElementById("stars")
+        .textContent =
+        "★".repeat(rating) +
+        "☆".repeat(5 - rating);
 
 
-        const rating =
-            Math.round(data.rating || 0);
-
-
-        document.getElementById("stars")
-            .textContent =
-            "★".repeat(rating) +
-            "☆".repeat(5 - rating);
-
-
-        if (!data.reviews || !data.reviews.length) {
-
-            container.innerHTML = `
-                <div class="review-loading">
-                    <p>
-                        Consulta las opiniones de nuestros clientes en Google.
-                    </p>
-                </div>
-            `;
-
-            return;
-
-        }
-
-
-        container.innerHTML =
-            data.reviews
+    container.innerHTML =
+        staticReviews
                 .map(review => {
 
                     const stars =
@@ -169,62 +171,12 @@ async function loadReviews() {
                             </div>
 
 
-                            <a
-                                class="review-google"
-                                href="${review.googleMapsUri || '#'}"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                Ver en Google →
-                            </a>
-
                         </article>
 
                     `;
 
                 })
                 .join("");
-
-
-        if (data.reviewsUri) {
-
-            document
-                .getElementById(
-                    "googleReviewsLink"
-                )
-                .href =
-                data.reviewsUri;
-
-        }
-
-    }
-
-    catch (error) {
-
-        console.error(error);
-
-
-        container.innerHTML = `
-
-            <div class="review-loading">
-
-                <p>
-                    No pudimos cargar las reseñas ahora.
-                </p>
-
-                <a
-                    class="text-link"
-                    href="https://www.google.com/maps/place/Peluqueria+Anita/"
-                    target="_blank"
-                >
-                    Ver reseñas en Google →
-                </a>
-
-            </div>
-
-        `;
-
-    }
 
 }
 
