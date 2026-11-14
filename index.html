@@ -4,33 +4,30 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Peluquería Anita | Maule</title>
+    <title>Peluquería Anita | Peluquería en Maule · Cortes, color y balayage</title>
 
     <meta
         name="description"
-        content="Peluquería Anita en Maule, Maule. Cortes, coloración, balayage, peinados, tratamientos y mucho más."
+        content="Peluquería Anita en Maule. Cortes, coloración, balayage, peinados y tratamientos. Lunes a viernes 10:00–20:00, sábado 10:00–17:00. Reserva por WhatsApp."
     >
 
     <link rel="canonical" href="https://peluqueriaanitaonline.com/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
+    <meta name="theme-color" content="#96636d">
 
     <meta property="og:url" content="https://peluqueriaanitaonline.com/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CL">
     <meta property="og:title" content="Peluquería Anita | Maule">
-    <meta property="og:description" content="Cortes, coloración, balayage, peinados y tratamientos en Maule.">
+    <meta property="og:description" content="Cortes, coloración, balayage, peinados y tratamientos en Maule. Reserva tu hora por WhatsApp.">
     <meta property="og:image" content="https://peluqueriaanitaonline.com/images/20201207_183859.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Peluquería Anita | Maule">
-    <meta name="twitter:description" content="Cortes, coloración, balayage, peinados y tratamientos en Maule.">
+    <meta name="twitter:description" content="Cortes, coloración, balayage, peinados y tratamientos en Maule. Reserva tu hora por WhatsApp.">
     <meta name="twitter:image" content="https://peluqueriaanitaonline.com/images/20201207_183859.jpg">
 
     <script type="application/ld+json">
@@ -42,6 +39,7 @@
         "url": "https://peluqueriaanitaonline.com/",
         "image": "https://peluqueriaanitaonline.com/images/20201207_183859.jpg",
         "telephone": "+56999631367",
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Pasaje 16 #1882",
@@ -49,6 +47,26 @@
             "addressRegion": "Maule",
             "addressCountry": "CL"
         },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -35.4597689,
+            "longitude": -71.6726942
+        },
+        "hasMap": "https://www.google.com/maps/place/Peluqueria+Anita/@-35.4597689,-71.6726942,17z",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "10:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "17:00"
+            }
+        ],
         "areaServed": {
             "@type": "City",
             "name": "Maule"
@@ -56,19 +74,10 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
         rel="stylesheet"
     >
 
@@ -79,171 +88,119 @@
 
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+
 
 <!-- =========================
-     NAVBAR
+     NAVBAR + HERO
 ========================= -->
 
 <header class="hero" id="inicio">
 
-<nav class="navbar">
+    <div class="hero-blob blob-1" aria-hidden="true"></div>
+    <div class="hero-blob blob-2" aria-hidden="true"></div>
 
-    <a href="#inicio" class="logo">
+    <nav class="navbar">
 
-        <div class="logo-circle">
-            A
-        </div>
-
-        <div>
-
-            <strong>
-                Peluquería Anita
-            </strong>
-
-            <span>
-                Maule, Maule
-            </span>
-
-        </div>
-
-    </a>
-
-
-    <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Abrir menú"
-    >
-        ☰
-    </button>
-
-
-    <div
-        class="nav-links"
-        id="navLinks"
-    >
-
-        <a href="#inicio">
-            Inicio
+        <a href="#inicio" class="logo">
+            <div class="logo-circle">A</div>
+            <div>
+                <strong>Peluquería Anita</strong>
+                <span>Maule, Maule</span>
+            </div>
         </a>
 
-        <a href="#servicios">
-            Servicios
-        </a>
+        <button class="menu-button" id="menuButton" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-        <a href="#galeria">
-            Galería
-        </a>
-
-        <a href="#nosotros">
-            Nosotros
-        </a>
-
-        <a href="#opiniones">
-            Opiniones
-        </a>
-
-        <a href="#contacto">
-            Contacto
-        </a>
-
-        <a
-            class="nav-reserva"
-            href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20reservar%20una%20hora."
-            target="_blank"
-        >
-            Reservar hora
-        </a>
-
-    </div>
-
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<div class="hero-content">
-
-    <div class="hero-text">
-
-        <p class="small-title">
-            BELLEZA · ESTILO · CUIDADO
-        </p>
-
-        <h1>
-
-            Tu cabello,
-
-            <span>
-                tu mejor versión.
-            </span>
-
-        </h1>
-
-
-        <p class="description">
-
-            Un espacio dedicado a cuidar tu cabello,
-            renovar tu estilo y hacerte sentir increíble.
-
-        </p>
-
-
-        <div class="buttons">
-
+        <div class="nav-links" id="navLinks">
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#opiniones">Opiniones</a>
+            <a href="#horarios">Horarios</a>
+            <a href="#preguntas">Preguntas</a>
             <a
-                class="button primary"
+                class="nav-reserva"
                 href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20reservar%20una%20hora."
                 target="_blank"
-            >
-                Reservar por WhatsApp
-            </a>
+                rel="noopener"
+            >Reservar hora</a>
+        </div>
+
+    </nav>
 
 
-            <a
-                class="button secondary"
-                href="#servicios"
-            >
-                Ver servicios
-            </a>
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <p class="small-title">BELLEZA · ESTILO · CUIDADO</p>
+
+            <h1>
+                Tu cabello,
+                <span>tu mejor versión.</span>
+            </h1>
+
+            <p class="description">
+                Cortes, color, balayage y peinados con atención cercana
+                y personalizada, en el corazón de Maule.
+            </p>
+
+            <div class="buttons">
+                <a
+                    class="button primary"
+                    href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20reservar%20una%20hora."
+                    target="_blank"
+                    rel="noopener"
+                >Reservar por WhatsApp</a>
+                <a class="button secondary" href="#servicios">Ver servicios y precios</a>
+            </div>
+
+            <div class="hero-badges">
+
+                <a class="hero-badge" href="#opiniones">
+                    <strong>4,7 ★</strong>
+                    <span>34 reseñas en Google</span>
+                </a>
+
+                <a class="hero-badge" href="#horarios">
+                    <strong class="open-status" data-open-status>Horarios</strong>
+                    <span data-open-detail>Lun a Sáb</span>
+                </a>
+
+            </div>
 
         </div>
 
 
-        <p class="location">
-            ● Maule, Maule
-        </p>
+        <div class="hero-image">
 
-    </div>
+            <img
+                src="images/20201207_183859.jpg"
+                alt="Clienta con melena rubia iluminada recién terminada en Peluquería Anita"
+                width="685"
+                height="913"
+            >
 
-
-    <div class="hero-image">
-
-        <img
-            src="images/20201207_183859.jpg"
-            alt="Trabajo de Peluquería Anita"
-        >
-
-
-        <div class="floating-card">
-
-            <strong>
-                Atención personalizada
-            </strong>
-
-            <span>
-                Para cada estilo y ocasión
-            </span>
+            <div class="floating-card">
+                <strong>Atención personalizada</strong>
+                <span>Para cada estilo y ocasión</span>
+            </div>
 
         </div>
 
     </div>
-
-</div>
 
 </header>
+
+
+<!-- Franja animada de servicios -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        <span>Cortes</span><i>✦</i><span>Coloración</span><i>✦</i><span>Balayage</span><i>✦</i><span>Mechas</span><i>✦</i><span>Peinados</span><i>✦</i><span>Tratamientos</span><i>✦</i>
+        <span>Cortes</span><i>✦</i><span>Coloración</span><i>✦</i><span>Balayage</span><i>✦</i><span>Mechas</span><i>✦</i><span>Peinados</span><i>✦</i><span>Tratamientos</span><i>✦</i>
+    </div>
+</div>
 
 
 
@@ -254,31 +211,19 @@
      SERVICIOS
 ========================= -->
 
-<section
-    class="section services"
-    id="servicios"
->
+<section class="section services" id="servicios">
 
     <div class="section-header">
 
         <div>
-
-            <p class="small-title">
-                NUESTROS SERVICIOS
-            </p>
-
-            <h2>
-                Todo para tu cabello
-            </h2>
-
+            <p class="small-title">NUESTROS SERVICIOS</p>
+            <h2>Todo para tu cabello</h2>
         </div>
 
-
         <p>
-
-            Encuentra el servicio ideal para renovar
-            tu estilo y cuidar tu cabello.
-
+            Encuentra el servicio ideal para renovar tu estilo.
+            Los precios son referenciales: el valor final depende
+            del largo y del estado de tu cabello.
         </p>
 
     </div>
@@ -286,102 +231,52 @@
 
     <div class="services-grid">
 
-
         <article class="service">
-
             <span>01</span>
-
-            <h3>
-                Cortes
-            </h3>
-
-            <p>
-                Cortes y cambios de estilo
-                adaptados a tu look.
-            </p>
-
+            <h3>Cortes</h3>
+            <p>Cortes y cambios de estilo adaptados a tu look, para dama y varón.</p>
+            <div class="price"><small>Dama y varón</small> <strong>$6.000</strong></div>
         </article>
 
-
         <article class="service">
-
             <span>02</span>
-
-            <h3>
-                Coloración
-            </h3>
-
-            <p>
-                Renueva tu color y encuentra
-                el tono que buscas.
-            </p>
-
+            <h3>Coloración</h3>
+            <p>Renueva tu color, cubre canas o encuentra el tono que buscas.</p>
+            <div class="price"><small>Desde</small> <strong>$35.000</strong></div>
         </article>
 
-
         <article class="service">
-
             <span>03</span>
-
-            <h3>
-                Balayage
-            </h3>
-
-            <p>
-                Iluminaciones y técnicas de color
-                para un resultado natural.
-            </p>
-
+            <h3>Balayage y mechas</h3>
+            <p>Iluminaciones, platinados y mechas de fantasía con resultado natural o atrevido.</p>
+            <div class="price"><strong>Cotiza por WhatsApp</strong></div>
         </article>
 
-
         <article class="service">
-
             <span>04</span>
-
-            <h3>
-                Peinados
-            </h3>
-
-            <p>
-                Looks para eventos,
-                celebraciones y ocasiones especiales.
-            </p>
-
+            <h3>Peinados</h3>
+            <p>Ondas, brushing y looks para eventos, celebraciones y ocasiones especiales.</p>
+            <div class="price"><small>Desde</small> <strong>$18.000</strong></div>
         </article>
 
-
         <article class="service">
-
             <span>05</span>
-
-            <h3>
-                Tratamientos
-            </h3>
-
-            <p>
-                Cuidados para mantener tu cabello
-                sano, suave y brillante.
-            </p>
-
+            <h3>Tratamientos</h3>
+            <p>Cuidados para mantener tu cabello sano, suave y brillante.</p>
+            <div class="price"><strong>Cotiza por WhatsApp</strong></div>
         </article>
 
-
-        <article class="service">
-
+        <article class="service service-cta">
             <span>06</span>
-
-            <h3>
-                Mucho más
-            </h3>
-
-            <p>
-                Consulta por otros servicios
-                disponibles.
-            </p>
-
+            <h3>¿Buscas otra cosa?</h3>
+            <p>Escríbenos y te contamos si lo hacemos y cuánto cuesta.</p>
+            <a
+                class="button primary"
+                href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20consultar%20por%20un%20servicio."
+                target="_blank"
+                rel="noopener"
+            >Consultar</a>
         </article>
-
 
     </div>
 
@@ -393,98 +288,46 @@
      GALERÍA
 ========================= -->
 
-<section
-    class="section gallery"
-    id="galeria"
->
+<section class="section gallery" id="galeria">
 
     <div class="section-header">
 
         <div>
-
-            <p class="small-title">
-                NUESTRO TRABAJO
-            </p>
-
-            <h2>
-                Galería
-            </h2>
-
+            <p class="small-title">NUESTRO TRABAJO</p>
+            <h2>Galería</h2>
         </div>
 
-
-        <p>
-
-            Algunos de los trabajos realizados
-            en Peluquería Anita.
-
-        </p>
+        <p>Algunos de los trabajos realizados en Peluquería Anita. Toca una foto para verla en grande.</p>
 
     </div>
 
 
     <div class="gallery-grid">
 
+        <figure class="gallery-item big">
+            <img src="images/20220908_201519.jpg" alt="Balayage platinado con raíz oscura difuminada" loading="lazy" width="411" height="913">
+            <figcaption>Balayage platinado</figcaption>
+        </figure>
 
-        <div class="gallery-item big">
+        <figure class="gallery-item">
+            <img src="images/20220908_201531.jpg" alt="Vista lateral de balayage platinado con puntas claras" loading="lazy" width="411" height="913">
+            <figcaption>Platinado, vista lateral</figcaption>
+        </figure>
 
-            <img
-                src="images/20201207_183859.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
+        <figure class="gallery-item">
+            <img src="images/20230130_225846.jpg" alt="Cabello largo con ondas e iluminaciones cobrizas" loading="lazy" width="411" height="913">
+            <figcaption>Ondas e iluminaciones cobrizas</figcaption>
+        </figure>
 
-        </div>
+        <figure class="gallery-item">
+            <img src="images/20230714_182754.jpg" alt="Corte bob a la altura del cuello en cabello oscuro" loading="lazy" width="411" height="913">
+            <figcaption>Corte bob</figcaption>
+        </figure>
 
-
-        <div class="gallery-item">
-
-            <img
-                src="images/20220908_201519.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/20220908_201531.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/20230130_225846.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="images/20230714_182754.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
-
-        </div>
-
-
-        <div class="gallery-item wide">
-
-            <img
-                src="images/20250802_181430.jpg"
-                alt="Trabajo de Peluquería Anita"
-            >
-
-        </div>
-
+        <figure class="gallery-item">
+            <img src="images/20250802_181430.jpg" alt="Mechas de fantasía en tono rojo sobre cabello oscuro" loading="lazy" width="421" height="913">
+            <figcaption>Mechas rojas de fantasía</figcaption>
+        </figure>
 
     </div>
 
@@ -496,70 +339,50 @@
      CONÓCENOS
 ========================= -->
 
-<section
-    class="section about"
-    id="nosotros"
->
+<section class="section about" id="nosotros">
 
     <div class="about-container">
 
+        <div class="about-card">
 
-        <div class="about-image">
+            <div class="about-stat">
+                <strong>4,7</strong>
+                <span>★★★★★<br>34 reseñas en Google</span>
+            </div>
 
-            <img
-                src="images/20220908_201519.jpg"
-                alt="Peluquería Anita"
-            >
+            <ul class="about-list">
+                <li>Atención por hora, sin apuros</li>
+                <li>Productos de calidad</li>
+                <li>Asesoría para elegir tu estilo</li>
+                <li>Un cafecito mientras esperas</li>
+            </ul>
 
         </div>
 
 
         <div class="about-text">
 
-            <p class="small-title">
-                CONÓCENOS
-            </p>
+            <p class="small-title">CONÓCENOS</p>
 
-
-            <h2>
-                Más que una peluquería.
-            </h2>
-
+            <h2>Más que una peluquería.</h2>
 
             <p>
-
-                En Peluquería Anita nos preocupamos
-                de entregar una atención cercana
-                y personalizada.
-
+                En Peluquería Anita nos preocupamos de entregar una atención
+                cercana y personalizada. Muchas de nuestras clientas vienen
+                hace años, y eso es lo que más nos enorgullece.
             </p>
-
 
             <p>
-
-                Buscamos que cada persona pueda
-                encontrar su estilo, sentirse cómoda
-                y disfrutar de una experiencia especial.
-
+                Buscamos que cada persona encuentre su estilo, se sienta
+                cómoda y salga feliz con su cabello.
             </p>
-
-
-            <p>
-
-                Estamos ubicados en Maule, Maule.
-
-            </p>
-
 
             <a
                 class="text-link"
                 href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20saber%20m%C3%A1s."
                 target="_blank"
-            >
-
-                Hablar con Peluquería Anita →
-
-            </a>
+                rel="noopener"
+            >Hablar con Peluquería Anita →</a>
 
         </div>
 
@@ -570,96 +393,175 @@
 
 
 <!-- =========================
-     OPINIONES
+     OPINIONES (fijas, sin depender de cargas externas)
 ========================= -->
 
-<section
-    class="section reviews"
-    id="opiniones"
->
+<section class="section reviews" id="opiniones">
 
     <div class="reviews-header">
 
         <div>
-
-            <p class="small-title">
-                GOOGLE REVIEWS
-            </p>
-
-            <h2>
-                Lo que dicen
-                nuestros clientes.
-            </h2>
-
+            <p class="small-title">RESEÑAS DE GOOGLE</p>
+            <h2>Lo que dicen nuestras clientas.</h2>
         </div>
 
-
         <div class="rating-box">
-
-            <div
-                class="rating-number"
-                id="rating"
-            >
-                —
-            </div>
-
+            <div class="rating-number">4,7</div>
             <div>
-
-                <div
-                    class="stars"
-                    id="stars"
-                >
-                    ☆☆☆☆☆
-                </div>
-
-                <span id="reviewCount">
-                    Cargando reseñas...
-                </span>
-
+                <div class="stars" aria-label="4,7 de 5 estrellas">★★★★★</div>
+                <span>34 reseñas en Google</span>
             </div>
-
         </div>
 
     </div>
 
 
-    <div
-        class="reviews-grid"
-        id="reviewsContainer"
-    >
+    <div class="reviews-grid">
 
-        <div class="review-loading">
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">A</div>
+                    <div class="reviewer-name">Andrea Gutierrez</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Soy clienta hace varios años y su atención siempre ha sido amable, cercana y profesional. Trabaja con excelentes productos y a precios muy accesibles. La recomiendo 100 % en todos los sentidos.</p>
+        </article>
 
-            <div class="loader"></div>
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">M</div>
+                    <div class="reviewer-name">Mariana Carrasco</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Una grata experiencia que vivimos como familia, 4 mujeres que siempre nos arreglamos el cabello con Anita. La recomiendo al 1000.</p>
+        </article>
 
-            <p>
-                Cargando opiniones de Google...
-            </p>
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">L</div>
+                    <div class="reviewer-name">Lucas Molina</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Excelente servicio, me atendió súper bien con un cafecito y mi cabello me quedó súper. Recomendado a 1000.</p>
+        </article>
 
-        </div>
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">H</div>
+                    <div class="reviewer-name">Henry Muena</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Maravillosa persona, su dedicación es única. 100 % recomendada.</p>
+        </article>
+
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">T</div>
+                    <div class="reviewer-name">Tatiana Suarez Rojas</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Lejos la mejor, súper profesional, excelente... un 7. Aparte de amorosa y gran mujer. 1000 % recomendada.</p>
+        </article>
+
+        <article class="review-card">
+            <div class="review-top">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">D</div>
+                    <div class="reviewer-name">Dani Palma Araya</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Fui a cortarme el pelo con mi hermana y quedó excelente el corte. Muy atenta y amable, y aclara muy bien las dudas que tengas. Lo seguiré haciendo.</p>
+        </article>
 
     </div>
 
 
     <div class="reviews-buttons">
-
         <a
-            id="googleReviewsLink"
             class="button primary"
-            href="https://www.google.com/maps/place/Peluqueria+Anita/@-35.4596475,-71.6724577,89m"
+            href="https://www.google.com/maps/place/Peluqueria+Anita/@-35.4597689,-71.6726942,17z"
             target="_blank"
-        >
-            Ver reseñas en Google
-        </a>
+            rel="noopener"
+        >Ver todas en Google y dejar tu reseña</a>
+    </div>
+
+</section>
 
 
-        <a
-            class="button secondary"
-            href="https://www.google.com/maps/place/Peluqueria+Anita/@-35.4596475,-71.6724577,89m"
-            target="_blank"
-        >
-            Dejar una reseña
-        </a>
+
+<!-- =========================
+     HORARIOS + UBICACIÓN
+========================= -->
+
+<section class="location-section" id="horarios">
+
+    <div class="location-container">
+
+        <div class="location-text">
+
+            <p class="small-title">HORARIOS Y UBICACIÓN</p>
+
+            <h2>Ven a conocernos.</h2>
+
+            <div class="hours" id="hoursTable">
+                <div class="hours-row" data-days="1,2,3,4,5">
+                    <span>Lunes a viernes</span>
+                    <strong>10:00 – 20:00</strong>
+                </div>
+                <div class="hours-row" data-days="6">
+                    <span>Sábado</span>
+                    <strong>10:00 – 17:00</strong>
+                </div>
+                <div class="hours-row closed" data-days="0">
+                    <span>Domingo</span>
+                    <strong>Cerrado</strong>
+                </div>
+            </div>
+
+            <p class="hours-status">
+                <span class="dot"></span>
+                <span data-open-status>Revisa nuestros horarios</span>
+                <span data-open-detail></span>
+            </p>
+
+            <div class="address">
+                <strong>Peluquería Anita</strong>
+                <span>Doña Ignacia 3, Pasaje del Maule, Pasaje 16 #1882, Maule</span>
+            </div>
+
+            <div class="buttons">
+                <a
+                    class="button primary"
+                    href="https://www.google.com/maps/dir/?api=1&destination=-35.4597689,-71.6726942"
+                    target="_blank"
+                    rel="noopener"
+                >Cómo llegar</a>
+                <a class="button secondary" href="tel:+56999631367">Llamar</a>
+            </div>
+
+        </div>
+
+
+        <div class="map">
+            <iframe
+                title="Mapa de Peluquería Anita en Maule"
+                src="https://www.google.com/maps?q=-35.4597689,-71.6726942&z=17&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
 
     </div>
 
@@ -668,76 +570,45 @@
 
 
 <!-- =========================
-     UBICACIÓN
+     PREGUNTAS FRECUENTES
 ========================= -->
 
-<section
-    class="location-section"
-    id="ubicacion"
->
+<section class="section faq" id="preguntas">
 
-    <div class="location-container">
-
-
-        <div class="location-text">
-
-            <p class="small-title">
-                ENCUÉNTRANOS
-            </p>
-
-
-            <h2>
-                Ven a conocernos.
-            </h2>
-
-
-            <p>
-
-                Estamos en Maule, Maule.
-                Si tienes dudas sobre cómo llegar,
-                escríbenos por WhatsApp.
-
-            </p>
-
-
-            <div class="address">
-
-                <strong>
-                    Peluquería Anita
-                </strong>
-
-                <span>
-                    Doña Ignacia 3,
-                    Pasaje del Maule,
-                    Pasaje 16 #1882
-                </span>
-
-            </div>
-
-
-            <a
-                class="button primary"
-                href="https://www.google.com/maps/dir/?api=1&destination=-35.4597689,-71.6726942"
-                target="_blank"
-            >
-                Cómo llegar
-            </a>
-
+    <div class="section-header">
+        <div>
+            <p class="small-title">PREGUNTAS FRECUENTES</p>
+            <h2>Antes de venir</h2>
         </div>
+        <p>¿Te quedó alguna duda? Escríbenos por WhatsApp y te respondemos.</p>
+    </div>
 
+    <div class="faq-list">
 
-        <div class="map">
+        <details>
+            <summary>¿Tengo que reservar hora?</summary>
+            <p>Te recomendamos reservar por WhatsApp para asegurar tu hora y que no tengas que esperar. Así también podemos preparar todo para tu servicio.</p>
+        </details>
 
-            <iframe
-                src="https://www.google.com/maps?q=-35.4597689,-71.6726942&z=17&output=embed"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+        <details>
+            <summary>¿Cuánto dura un balayage o una coloración?</summary>
+            <p>Depende del largo y del color que tengas hoy. Cuéntanos qué quieres lograr (si puedes, mándanos una foto de referencia) y te decimos cuánto tiempo y cuánto costaría.</p>
+        </details>
 
-        </div>
+        <details>
+            <summary>¿Por qué los precios dicen "desde"?</summary>
+            <p>Porque el valor final cambia según el largo, el grosor y el estado del cabello. Siempre te confirmamos el precio antes de empezar.</p>
+        </details>
 
+        <details>
+            <summary>¿Atienden los domingos?</summary>
+            <p>No. Atendemos de lunes a viernes de 10:00 a 20:00 y los sábados de 10:00 a 17:00.</p>
+        </details>
+
+        <details>
+            <summary>¿Dónde están?</summary>
+            <p>En Doña Ignacia 3, Pasaje del Maule, Pasaje 16 #1882, Maule. Usa el botón "Cómo llegar" para abrir la ruta en Google Maps.</p>
+        </details>
 
     </div>
 
@@ -749,86 +620,39 @@
      CONTACTO
 ========================= -->
 
-<section
-    class="contact"
-    id="contacto"
->
+<section class="contact" id="contacto">
 
     <div class="contact-container">
 
-
         <div>
-
-            <p class="small-title">
-                CONTACTO
-            </p>
-
-
-            <h2>
-                ¿Lista para tu próximo cambio?
-            </h2>
-
-
-            <p>
-
-                Escríbenos para consultar disponibilidad,
-                servicios y reservar tu hora.
-
-            </p>
-
+            <p class="small-title">CONTACTO</p>
+            <h2>¿Lista para tu próximo cambio?</h2>
+            <p>Escríbenos para consultar disponibilidad, precios y reservar tu hora.</p>
         </div>
-
 
         <div class="contact-info">
 
+            <a href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20reservar%20una%20hora." target="_blank" rel="noopener">
+                <span>WhatsApp</span>
+                <strong>Reservar ahora →</strong>
+            </a>
 
             <a href="tel:+56999631367">
-
-                <span>
-                    Teléfono
-                </span>
-
-                <strong>
-                    +56 9 9963 1367
-                </strong>
-
+                <span>Teléfono</span>
+                <strong>+56 9 9963 1367</strong>
             </a>
-
-
-            <a
-                href="https://wa.me/56999631367"
-                target="_blank"
-            >
-
-                <span>
-                    WhatsApp
-                </span>
-
-                <strong>
-                    Escribir ahora →
-                </strong>
-
-            </a>
-
 
             <div>
-
-                <span>
-                    Dirección
-                </span>
-
-                <strong>
-                    Doña Ignacia 3,
-                    Pasaje del Maule,
-                    Pasaje 16 #1882
-                </strong>
-
-                <small>
-                    Maule, Maule
-                </small>
-
+                <span>Horario</span>
+                <strong>Lun a Vie 10:00–20:00 · Sáb 10:00–17:00</strong>
+                <small>Domingo cerrado</small>
             </div>
 
+            <div>
+                <span>Dirección</span>
+                <strong>Pasaje 16 #1882, Pasaje del Maule</strong>
+                <small>Maule, Maule</small>
+            </div>
 
         </div>
 
@@ -844,24 +668,11 @@
 <footer>
 
     <div>
-
-        <strong>
-            Peluquería Anita
-        </strong>
-
-        <span>
-            Maule, Maule
-        </span>
-
+        <strong>Peluquería Anita</strong>
+        <span>Maule, Maule</span>
     </div>
 
-
-    <p>
-
-        © <span id="year"></span>
-        Peluquería Anita
-
-    </p>
+    <p>© <span id="year">2026</span> Peluquería Anita</p>
 
 </footer>
 
@@ -871,9 +682,21 @@
     class="whatsapp"
     href="https://wa.me/56999631367?text=Hola%20Peluquer%C3%ADa%20Anita%2C%20quisiera%20consultar%20por%20una%20hora."
     target="_blank"
+    rel="noopener"
+    aria-label="Escribir por WhatsApp"
 >
-    WA
+    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="currentColor">
+        <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.41 9.41 0 0 1 2.77 6.7c0 5.22-4.25 9.46-9.47 9.46zm8.06-17.53A11.33 11.33 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.03-1.58a11.36 11.36 0 0 0 5.45 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.33-8.05z"/>
+    </svg>
 </a>
+
+
+<!-- Visor de fotos de la galería -->
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">×</button>
+    <img id="lightboxImg" src="" alt="">
+    <p id="lightboxCaption"></p>
+</div>
 
 
 <script src="script.js"></script>
